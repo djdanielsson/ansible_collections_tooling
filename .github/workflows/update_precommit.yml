@@ -26,12 +26,12 @@ jobs:
       - name: Update pre-commit
         run: pre-commit autoupdate
 
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v6
         with:
           python-version: '3.x'
 
       - name: Install Ansible
-        run: pip install --upgrade "ansible-core>=2.15,<2.19"
+        run: pip install --upgrade "ansible-core>=2.20"
 
       - name: Run Pre-commit to alert of any linting changes.
         continue-on-error: true

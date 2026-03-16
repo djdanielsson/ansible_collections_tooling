@@ -23,7 +23,7 @@ jobs:
         with:
           repository: redhat-cop/ansible_collections_tooling
 
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v6
         with:
           python-version: '3.x'
 
@@ -31,7 +31,7 @@ jobs:
         run: sudo apt -y install podman
 
       - name: Install Ansible and Ansible Builder
-        run: pip install --upgrade setuptools "ansible-core>=2.15,<2.19" ansible-builder
+        run: pip install --upgrade setuptools "ansible-core>=2.20" ansible-builder
 
       - name: Move ansible.cfg if exists
         run: mv .github/files/ansible.cfg . || echo "Nothing to move"

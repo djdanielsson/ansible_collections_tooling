@@ -13,11 +13,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v6
         with:
           python-version: '3.x'
       - name: Install Ansible
-        run: pip install --upgrade "ansible-core>=2.15,<2.19"
+        run: pip install --upgrade "ansible-core>=2.20"
         if: inputs.collection_dependencies
       - uses: pre-commit/action@v3.0.1
 ...
