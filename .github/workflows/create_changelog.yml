@@ -24,6 +24,10 @@ on:
         description: token for uploading tarballs to a release
         required: true
 
+permissions:
+  contents: write
+  pull-requests: write
+
 jobs:
   changelog:
     runs-on: ubuntu-latest
